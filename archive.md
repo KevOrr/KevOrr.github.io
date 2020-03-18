@@ -9,9 +9,11 @@ sitemap:
 
 <div class="page">
 
+{% comment %}
 {% capture page_subtitle %}
   {% include page/searchbox.html %}
 {% endcapture %}
+{% endcomment %}
 
 {% include page/title.html title=page.title subtitle=page_subtitle %}
 
@@ -23,15 +25,15 @@ sitemap:
         {% capture category_content %}<a class="label" href="{{ category.url }}">{{ category.name }}</a>{% endcapture %}
       {% endif %}
 
-  	{% capture month %}{{ post.date | date: '%m%Y' }}{% endcapture %}
-  	{% capture nmonth %}{{ post.next.date | date: '%m%Y' }}{% endcapture %}
-  		{% if month != nmonth %}
-  			{% if forloop.index != 1 %}
-  			</ul>
-  			{% endif %}
-  			<h1>{% include utils/date_custom_short.html date = post.date %}</h1>
-  			<ul class="related-posts">
-  		{% endif %}
+    {% capture month %}{{ post.date | date: '%m%Y' }}{% endcapture %}
+    {% capture nmonth %}{{ post.next.date | date: '%m%Y' }}{% endcapture %}
+      {% if month != nmonth %}
+        {% if forloop.index != 1 %}
+        </ul>
+        {% endif %}
+        <h1>{% include utils/date_custom_short.html date = post.date %}</h1>
+        <ul class="related-posts">
+      {% endif %}
 
       {% include page/post-list-item.html %}
 
@@ -40,7 +42,7 @@ sitemap:
       {% endcomment %}
 
      {% endfor %}
-  	 </ul>
+     </ul>
 
 
   {% comment %}

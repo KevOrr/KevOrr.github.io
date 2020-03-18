@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-<title>{% if page.title == "Blog" %}{{ site.blog.title }} <!-- &middot; --> {{ site.tagline }}{% else %}{% if page.tag %}{{ site.data.tags[page.tag].name }}{% else %}{{ page.title }}{% endif %} &#9642; {{ site.blog.title }}{% endif %}</title>
+<title>{% if page.title == "Blog" %}{{ site.blog.title }} | {{ site.blog.tagline }}{% else %}{% if page.tag %}{{ site.data.tags[page.tag].name }}{% else %}{{ page.title }}{% endif %} | {{ site.blog.title }}{% endif %}</title>
 <!--{% if page.description %}
 {% capture desc %}{{ page.description }}{:.message}{% endcapture %}
 <meta name="description" content="{{ desc | markdownify | strip_html | truncatewords: 50 }}">
@@ -40,6 +40,7 @@
 <!-- Styles -->
 <link rel="stylesheet" href="{{ "assets/vendor/normalize-css/normalize.css" | relative_url }}">
 <link rel="stylesheet" href="{{ "assets/css/main.css" | relative_url }}">
+<link rel="stylesheet" id="theme-style">
 
 {% if site.blog.load_google_fonts %}
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family={{ site.blog.load_google_fonts }}">

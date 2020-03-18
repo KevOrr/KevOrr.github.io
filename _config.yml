@@ -1,18 +1,15 @@
 # Base blog settings
-baseurl                      : "/dactl/" # the subpath of your site,                         # e.g. /blog/
-                              # set to '' in case of hosting on GitHub
-url                          : "" # the base hostname & protocol for your site
-                                  # `http://<username>.github.io` - for GitHub
+baseurl                      : ""
+url                          : "https://kevorr.com" # the base hostname & protocol for your site
 
 blog:
-  title                      : dactl
-  description                  : >
-                               this should contain a proper description
+  title                      : "Kevin Orr"
+  description                : "Programming / Hacking / Math"
+  tagline                    : "Programming / Hacking / Math"
 
 # Layout configuration
-  logo_path                  : "assets/img/dactl.svg" # path to logo file
-  search_path                : # "yourgitusername.github.io"
-                               # needed for searchbox in archive page
+  logo_path                  : ""
+  search_path                : "kevorr.com" # needed for searchbox in archive page
   hero_layout                : true # turn on hero layout for blog and posts
   hero_placeholder           : "assets/img/generic_hero.jpg" # placeholder for hero image
   excerpts                   : true # show excerpts instead of full post content on blog page
@@ -26,14 +23,14 @@ blog:
 
 # Author info
 author:
-  fullname                  : Your Name
+  fullname                  : Kevin Orr
   rss                       : true # generate RSS feed and show it's icon in header
-  mail                      : your@email.com # change to your e-mail address
-  twitter                   : twitter-user-name
-  github                    : github-user-name
-  youtube                   : youtube-user-name
-  stackoverflow             : stackoverflow-user-name
-  disqus                    : dactl # your disqus site name
+  mail                      : kevin@kevorr.com # change to your e-mail address
+  # twitter                   : twitter-user-name
+  github                    : kevorr
+  # youtube                   : youtube-user-name
+  # stackoverflow             : stackoverflow-user-name
+  disqus                    : kevorr.com # your disqus site name
   google_analytics          : # 'UA-XXXXXXXX-X'
   photo                     : "uploads/me2.png"
   photo2x                   : "uploads/me.png"

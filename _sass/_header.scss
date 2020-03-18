@@ -20,6 +20,10 @@ header {
 .menu {
     float: left;
 
+    .logo a {
+      color: var(--text-color);
+    }
+
 	  ul {
 	    list-style-type: none;
 	    margin-bottom: 0rem;

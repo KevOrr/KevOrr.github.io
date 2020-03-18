@@ -1,155 +1,78 @@
-// Code
-//-------------------------------
-// Inline and block-level code snippets. Includes tweaks to syntax highlighted
-// snippets from Rouge and Gist embeds.
-
-code,
-pre {
-  font-family: $serif;
+.highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight, .highlight .w {
+  color: #f8f8f2;
+  background-color: #272822;
 }
-
-// small code thingies
-code {
-  padding: .25em .5em;
-  font-size: .85em;
-  // Could be mistaken for a link if the user choses a similar link-color, so better no colored inline code.
-  // color: $code-color;
-  background-color: var(--code-bg-color);
-  // No border radius to prevent repaint on code scroll
-  // border-radius: 3px;
+.highlight .err {
+  color: #272822;
+  background-color: #f92672;
 }
-
-code.highlighter-rouge {
-  box-shadow: 0 1px 1px var(--shadow-color);
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs {
+  color: #75715e;
 }
-
-pre code {
-  padding: 0;
-  font-size: .75em;
-  color: inherit;
-  background-color: transparent;
+.highlight .cp {
+  color: #f4bf75;
 }
-
-figure, .figure {
-  margin-left: -1rem;
-  margin-right: -1rem;
-
-  > *:first-child {
-    padding: 1rem;
-    background: var(--code-bg-color);
-  }
-
-  > figcaption, > .figcaption {
-    font-size: smaller;
-    color: #9a9a9a;
-    text-align: center;
-    font-style: italic;
-    margin-top: 0.5rem;
-    padding: 0 1rem;
-  }
+.highlight .nt {
+  color: #f4bf75;
 }
-
-//http://www.minh.io/blog/2015/06/28/jekyll-line-numbers/
-//https://drewsilcock.co.uk/proper-linenumbers
-//https://sacha.me/articles/jekyll-rouge/#using-rouge-in-jekyll-3-on-github-pages
-// Rouge
-.highlight {
-  margin-bottom: 1.5rem;
-  font-size: .75em;
-  // /* Prevent code linebreaks and allow side-scrolling (much better readability on mobile) */
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  // /* Make code same width as regular text, and scroll the full page width on mobile */
-  @include figure2();
-
-  backface-visibility: hidden;
-  box-shadow: 0 1px 2px var(--shadow-color);
-  position: relative;
-  
-  &:before {
-        position: absolute;
-        top: 0;
-        right: 0;
-        padding: 0.5em;
-        background-color: var(--code-border);
-        content: "\e86f";
-        font-family: "icomoon" !important;
-        line-height: 1;
-        text-transform: none;
-        speak: none;
-        box-shadow: 0 1px 2px var(--shadow-color);
-      }
-
-  pre {
-    line-height: 1.6;
-    padding: .5rem 0 .5rem .5rem;
-    margin-bottom: 0;
-    overflow-x: auto;
-  }
-
-  .lineno {
-    display: inline-block; // Ensures the null space also isn't selectable
-    padding-right: .25rem;
-    color: var(--metadata-color);
-    // Make sure numbers aren't selectable
-    -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
-  }
-
-  table {
-    // resets down below
-    width: 90%;
-    background: transparent;
-    box-shadow: none;
-    margin-bottom: 0;
-    font-size: inherit;
-
-    td, th {
-    padding: 0.25rem .5rem;
-    }
-
-    td:not(:first-child) {
-    border-left: 0;
-    }
-
-    td.gutter {
-      background: var(--code-border);
-      box-shadow: 0 1px 2px var(--shadow-color);
-      width: 6%;
-    }
-
-    td.code {
-      position:relative;
-      width: 90%;
-    }
-  }
+.highlight .o, .highlight .ow {
+  color: #f8f8f2;
 }
-
-@media (max-width: 48rem) {
-  td.code:before {
-    display: none;
-  }
+.highlight .p, .highlight .pi {
+  color: #f8f8f2;
 }
-
-// Gist via GitHub Pages
-// .gist .gist-file {
-//   font-family: Menlo, Monaco, "Courier New", monospace !important;
-// }
-// .gist .markdown-body {
-//   padding: 15px;
-// }
-// .gist pre {
-//   padding: 0;
-//   background-color: transparent;
-// }
-// .gist .gist-file .gist-data {
-//   font-size: .8rem !important;
-//   line-height: 1.4;
-// }
-// .gist code {
-//   padding: 0;
-//   color: inherit;
-//   background-color: transparent;
-//   border-radius: 0;
-// }
+.highlight .gi {
+  color: #a6e22e;
+}
+.highlight .gd {
+  color: #f92672;
+}
+.highlight .gh {
+  color: #66d9ef;
+  background-color: #272822;
+  font-weight: bold;
+}
+.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
+  color: #ae81ff;
+}
+.highlight .kc {
+  color: #fd971f;
+}
+.highlight .kt {
+  color: #fd971f;
+}
+.highlight .kd {
+  color: #fd971f;
+}
+.highlight .s, .highlight .sa, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
+  color: #a6e22e;
+}
+.highlight .sr {
+  color: #a1efe4;
+}
+.highlight .si {
+  color: #cc6633;
+}
+.highlight .se {
+  color: #cc6633;
+}
+.highlight .nn {
+  color: #f4bf75;
+}
+.highlight .nc {
+  color: #f4bf75;
+}
+.highlight .no {
+  color: #f4bf75;
+}
+.highlight .na {
+  color: #66d9ef;
+}
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mx {
+  color: #a6e22e;
+}
+.highlight .ss {
+  color: #a6e22e;
+}
