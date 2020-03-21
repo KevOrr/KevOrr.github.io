@@ -3,20 +3,19 @@
 <article class="blog">
 
 
-  {% if site.blog.hero_layout == true %}
+  {%- if site.blog.hero_layout == true %}
     {% include utils/hero.html %}
-  {% endif %}
+  {% endif -%}
 
   <!-- Post title (& hero image) container -->
   <div class="
-  {% if site.blog.hero_layout == true %}
+  {%- if site.blog.hero_layout == true -%}
     post-title-container
-      {% if post.hero %}
-        {{ post.url | remove: '/posts/' }} {{ post.url | remove: '/posts/' }}-container hero-hov
-      {% endif %}
-    {% else %}
+      {%- if post.hero %} {{ post.url | remove: '/posts/' }} {{ post.url | remove: '/posts/' }}-container hero-hov
+      {%- endif -%}
+    {%- else -%}
     post-title-container-nohero
-  {% endif %}
+  {%- endif -%}
   ">
 
     <!-- Post title -->
@@ -32,11 +31,11 @@
       </h1>
     <!-- Post meta -->
       <div class="
-      {% if site.blog.hero_layout == true %}
+      {%- if site.blog.hero_layout == true -%}
         post-meta
-      {% else %}
+      {%- else -%}
         post-meta-nohero
-        {% endif %}
+      {%- endif -%}
       ">
 
         <span>{{ post.date | date: "%Y-%m-%d" }}</span>
