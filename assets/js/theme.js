@@ -1,14 +1,16 @@
 (function () {
 
-  const themes = [
-    '/assets/css/theme-light.css',
-    '/assets/css/theme-dark.css'
-  ]
+  const themes = ['theme-light', 'theme-dark'];
 
   function setTheme(idx) {
     idx = Number.isInteger(idx) ? idx : 0;
     localStorage.setItem('theme', idx);
-    document.querySelector('#theme-style').setAttribute('href', themes[idx]);
+    document.body.classList.forEach(
+      (c) => {
+        if (c.startsWith('theme-'))
+          document.body.classList.remove(c)
+      });
+    document.body.classList.add(themes[idx]);
   }
 
   function getLocalTheme() {
